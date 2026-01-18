@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f8fc;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #0b5ed7;
+    color: white;
+    padding: 15px 40px;
+}
+
+header h1 {
+    font-size: 26px;
+}
+
+/* NAV */
+nav {
+    background: white;
+    padding: 12px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #0b5ed7;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #084298;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(
+        rgba(11,94,215,0.7),
+        rgba(11,94,215,0.7)
+    ),
+    url("../assets/images/hero-bg.jpg") center/cover no-repeat;
+    color: white;
+    padding: 80px 40px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+}
+
+/* CONTENT */
+.container {
+    padding: 40px;
+}
+
+.section-title {
+    color: #0b5ed7;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    max-width: 700px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* FORM */
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+button {
+    background: #0b5ed7;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #084298;
+}
+
+/* FOOTER */
+footer {
+    background: #0b5ed7;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 50px;
+}
