@@ -206,11 +206,12 @@ body::before {
     left: 0;
     height: 100%;
     width: 100%;
-    background: url("..assets/images/logo-coloured.png") no-repeat center;
+    background: url("assets/images/logo-coloured.png") no-repeat center;
     background-size: 70%;
     opacity: 0.04;   /* VERY FADED */
     z-index: -1;
 }
+
 
 
 
