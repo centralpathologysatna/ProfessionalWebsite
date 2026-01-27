@@ -212,10 +212,28 @@ body::before {
     z-index: -1;
 }
 
+/* SERVICES GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
 
+/* Card refinement */
+.services-grid .card {
+    height: 100%;
+}
 
+/* Service title */
+.service-title {
+    margin-bottom: 15px;
+    color: #0b5ed7;
+    font-size: 18px;
+}
 
-
-
-
-
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
