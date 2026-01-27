@@ -175,8 +175,8 @@ header {
 
 /* Make logo responsive */
 .header-logo img {
-    max-height: 75px;
-    width: auto;
+    max-height: 60px;
+    width: 120px;
 }
 
 @media (max-width: 768px) {
@@ -194,11 +194,12 @@ body::before {
     left: 0;
     height: 100%;
     width: 100%;
-    background: url("../images/logo-coloured.png") no-repeat center;
+    background: url("..assets/images/logo-coloured.png") no-repeat center;
     background-size: 70%;
     opacity: 0.04;   /* VERY FADED */
     z-index: -1;
 }
+
 
 
 
