@@ -174,15 +174,17 @@ header {
 }
 
 /* Make logo responsive */
-@media (max-width: 768px) {
-    .header-left h1 {
-        font-size: 22px;
-    }
+.header-logo img {
+    max-height: 75px;
+    width: auto;
+}
 
+@media (max-width: 768px) {
     .header-logo img {
-        max-height: 40px;
+        max-height: 50px;
     }
 }
+
 
 /* FADED FULL PAGE BACKGROUND */
 body::before {
@@ -197,5 +199,6 @@ body::before {
     opacity: 0.04;   /* VERY FADED */
     z-index: -1;
 }
+
 
 
