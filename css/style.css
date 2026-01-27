@@ -150,4 +150,52 @@ footer {
     padding: 12px;
     margin-top: 50px;
 }
+/* HEADER WITH LOGO */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
+    position: relative;
+    z-index: 2;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #0b5ed7;
+}
+
+/* Logo styling */
+.header-logo img {
+    max-height: 55px;
+    width: auto;
+}
+
+/* Make logo responsive */
+@media (max-width: 768px) {
+    .header-left h1 {
+        font-size: 22px;
+    }
+
+    .header-logo img {
+        max-height: 40px;
+    }
+}
+
+/* FADED FULL PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../images/logo-coloured.png") no-repeat center;
+    background-size: 70%;
+    opacity: 0.04;   /* VERY FADED */
+    z-index: -1;
+}
+
 
