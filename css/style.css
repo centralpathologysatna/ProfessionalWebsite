@@ -255,4 +255,28 @@ footer {
 }
 
 
+/* IMAGE SLIDER */
+.slider {
+    position: relative;
+    max-width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
 
