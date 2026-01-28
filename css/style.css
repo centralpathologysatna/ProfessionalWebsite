@@ -52,6 +52,22 @@ header {
     max-width: 220px;
     cursor: pointer;
 }
+.site-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.brand-central {
+    color: #292E54;
+}
+
+.brand-pathology {
+    color: #A51F13;
+    margin-left: 6px;
+}
+
 
 /* ================= NAV ================= */
 nav {
@@ -284,6 +300,7 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
 
 
 
