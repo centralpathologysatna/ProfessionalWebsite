@@ -374,6 +374,26 @@ footer {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
 }
+@media (max-width: 768px) {
+    body.swipe-left {
+        animation: swipeLeftHint 0.25s ease;
+    }
+
+    body.swipe-right {
+        animation: swipeRightHint 0.25s ease;
+    }
+
+    @keyframes swipeLeftHint {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-8px); }
+    }
+
+    @keyframes swipeRightHint {
+        from { transform: translateX(0); }
+        to   { transform: translateX(8px); }
+    }
+}
+
 
 
 
