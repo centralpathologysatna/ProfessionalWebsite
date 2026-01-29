@@ -139,6 +139,25 @@ ul li {
 .service-list li {
     font-weight: 600;
 }
+/* SERVICES GRID – ONLY USED IN services.html */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.services-grid .card {
+    height: 100%;
+}
+
+/* Mobile: single column */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* FADE IN ANIMATION – OPTION 2 */
 .fade-in {
@@ -231,4 +250,5 @@ footer {
         height: 220px;
     }
 }
+
 
