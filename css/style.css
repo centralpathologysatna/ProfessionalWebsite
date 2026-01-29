@@ -278,5 +278,51 @@ footer {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+/* CONTINUOUS IMAGE MARQUEE */
+.image-marquee {
+    width: 100%;
+    overflow: hidden;
+    margin: 30px auto;
+    position: relative;
+}
+
+.image-track {
+    display: flex;
+    width: max-content;
+    animation: scrollImages 35s linear infinite;
+}
+
+.image-track img {
+    height: 220px;
+    width: auto;
+    margin-right: 30px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Animation */
+@keyframes scrollImages {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover (professional touch) */
+.image-marquee:hover .image-track {
+    animation-play-state: paused;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .image-track img {
+        height: 150px;
+        margin-right: 20px;
+    }
+}
+
 
 
