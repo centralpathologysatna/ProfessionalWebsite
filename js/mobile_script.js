@@ -51,46 +51,48 @@ window.addEventListener('scroll', () => {
 
 /* ===== MOBILE SWIPE NAVIGATION ===== */
 
-if (window.innerWidth <= 768) {
+document.addEventListener("DOMContentLoaded", () => {
 
     let startX = 0;
-    let endX = 0;
-    const minSwipeDistance = 70; // avoid accidental swipes
+    let startY = 0;
+    const minSwipeDistance = 70;
 
-    document.addEventListener('touchstart', e => {
+    document.addEventListener("touchstart", e => {
         startX = e.touches[0].clientX;
-    });
+        startY = e.touches[0].clientY;
+    }, { passive: true });
 
-    document.addEventListener('touchend', e => {
-        endX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
+    document.addEventListener("touchend", e => {
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
 
-    function handleSwipe() {
-        const diff = endX - startX;
+        const diffX = endX - startX;
+        const diffY = endY - startY;
 
-        if (Math.abs(diff) < minSwipeDistance) return;
+        // Ignore vertical scroll
+        if (Math.abs(diffX) < Math.abs(diffY)) return;
+        if (Math.abs(diffX) < minSwipeDistance) return;
 
-        const navLinks = Array.from(document.querySelectorAll('nav a'));
-        const currentPath = window.location.pathname.split('/').pop();
+        const navLinks = Array.from(document.querySelectorAll("nav a"));
+        if (!navLinks.length) return;
 
-        const currentIndex = navLinks.findIndex(
-            link => link.getAttribute('href') === currentPath
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+        const currentIndex = navLinks.findIndex(link =>
+            link.getAttribute("href").includes(currentPage)
         );
 
         if (currentIndex === -1) return;
 
         // Swipe LEFT → Next page
-        if (diff < 0 && currentIndex < navLinks.length - 1) {
-            document.body.classList.add('swipe-left');
+        if (diffX < 0 && currentIndex < navLinks.length - 1) {
             window.location.href = navLinks[currentIndex + 1].href;
         }
 
         // Swipe RIGHT → Previous page
-        if (diff > 0 && currentIndex > 0) {
-            document.body.classList.add('swipe-right');
+        if (diffX > 0 && currentIndex > 0) {
             window.location.href = navLinks[currentIndex - 1].href;
         }
-    }
-}
+    });
 
+});
