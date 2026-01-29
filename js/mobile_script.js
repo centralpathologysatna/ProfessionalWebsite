@@ -48,3 +48,49 @@ window.addEventListener('scroll', () => {
         }, 400);
     }, 120);
 });
+
+/* ===== MOBILE SWIPE NAVIGATION ===== */
+
+if (window.innerWidth <= 768) {
+
+    let startX = 0;
+    let endX = 0;
+    const minSwipeDistance = 70; // avoid accidental swipes
+
+    document.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+    });
+
+    document.addEventListener('touchend', e => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const diff = endX - startX;
+
+        if (Math.abs(diff) < minSwipeDistance) return;
+
+        const navLinks = Array.from(document.querySelectorAll('nav a'));
+        const currentPath = window.location.pathname.split('/').pop();
+
+        const currentIndex = navLinks.findIndex(
+            link => link.getAttribute('href') === currentPath
+        );
+
+        if (currentIndex === -1) return;
+
+        // Swipe LEFT → Next page
+        if (diff < 0 && currentIndex < navLinks.length - 1) {
+            document.body.classList.add('swipe-left');
+            window.location.href = navLinks[currentIndex + 1].href;
+        }
+
+        // Swipe RIGHT → Previous page
+        if (diff > 0 && currentIndex > 0) {
+            document.body.classList.add('swipe-right');
+            window.location.href = navLinks[currentIndex - 1].href;
+        }
+    }
+}
+
