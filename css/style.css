@@ -67,6 +67,19 @@ header {
     color: #A51F13;
     margin-left: 6px;
 }
+/* Fix logo link overlay issue */
+.header-logo a {
+    display: inline-block;
+    line-height: 0;
+}
+
+/* Ensure content layers are correct */
+.hero,
+.container {
+    position: relative;
+    z-index: 1;
+}
+
 
 
 /* ================= NAV ================= */
@@ -300,6 +313,7 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
 
 
 
