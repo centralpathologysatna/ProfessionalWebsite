@@ -30,7 +30,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: #3F83E8;
+    background: #448DFA;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
@@ -393,6 +393,7 @@ footer {
         to   { transform: translateX(8px); }
     }
 }
+
 
 
 
