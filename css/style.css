@@ -431,6 +431,47 @@ footer {
 .fade-out {
     opacity: 0;
 }
+/* HOME SERVICES GRID */
+.services-grid-home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.service-box {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #0b5ed7;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    background: #0b5ed7;
+    color: white;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .services-grid-home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .services-grid-home {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
 
