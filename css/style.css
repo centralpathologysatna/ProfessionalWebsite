@@ -431,17 +431,20 @@ footer {
 .fade-out {
     opacity: 0;
 }
+
 /* HOME SERVICES GRID */
 .services-grid-home {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .service-box {
-    background: white;
-    padding: 22px;
+    display: block;              /* IMPORTANT FIX */
+    background: #ffffff;
+    padding: 20px;
     border-radius: 12px;
     text-decoration: none;
     color: #0b5ed7;
@@ -451,6 +454,7 @@ footer {
     transition: all 0.25s ease;
 }
 
+/* hover */
 .service-box:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
@@ -458,24 +462,16 @@ footer {
     color: white;
 }
 
-/* Tablet */
+/* tablet */
 @media (max-width: 1024px) {
     .services-grid-home {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile */
+/* mobile */
 @media (max-width: 600px) {
     .services-grid-home {
         grid-template-columns: 1fr;
     }
 }
-
-
-
-
-
-
-
-
