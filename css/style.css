@@ -113,7 +113,7 @@ nav a:hover {
 
 /* CARD */
 .card {
-    background: #903999;
+    background: #EB9985;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -475,5 +475,6 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
