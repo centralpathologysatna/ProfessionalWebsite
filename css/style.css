@@ -57,7 +57,7 @@ header {
 
 /* NAV */
 nav {
-    background: #ffffff;
+    background: #083d66;
     padding: 12px 40px;
     display: flex;
     justify-content: flex-end;
@@ -67,12 +67,12 @@ nav {
 nav a {
     margin-left: 22px;
     text-decoration: none;
-    color: #0b5ed7;
+    color: white;
     font-weight: 600;
 }
 
 nav a:hover {
-    color: #084298;
+    color: #1abc9c;
 }
 
 /* HERO */
@@ -475,6 +475,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
