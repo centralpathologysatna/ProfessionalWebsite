@@ -207,7 +207,7 @@ ul li {
 
 /* FOOTER */
 footer {
-    background: #0b5ed7;
+    background: #083d66;
     color: white;
     text-align: center;
     padding: 14px;
@@ -475,6 +475,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
