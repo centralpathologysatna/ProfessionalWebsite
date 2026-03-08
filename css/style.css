@@ -205,13 +205,68 @@ ul li {
     object-fit: cover;
 }
 
+
+
 /* FOOTER */
-footer {
-    background: #083d66;
+
+.footer{
+    background:#083d66;
     color: white;
-    text-align: center;
-    padding: 14px;
-    margin-top: 60px;
+    padding:50px 10%;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer h3{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.footer h4{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.footer p{
+    font-size:14px;
+    line-height:1.6;
+}
+
+.footer ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer ul li{
+    margin-bottom:10px;
+}
+
+.footer ul li a{
+    text-decoration:none;
+    color:#ddd;
+}
+
+.footer ul li a:hover{
+    color:#fff;
+}
+
+.directions-link{
+    display:inline-block;
+    margin-top:10px;
+    color:#9ad1ff;
+    text-decoration:none;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.2);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    font-size:14px;
 }
 
 /* RESPONSIVE – OPTION 4 & 5 */
@@ -475,6 +530,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
