@@ -42,6 +42,9 @@ header {
 .brand-central {
     color: #292E54;
 }
+.brand-central-footer {
+    color: white;
+}
 
 .brand-pathology {
     color: #A51F13;
@@ -688,6 +691,7 @@ ul li {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
