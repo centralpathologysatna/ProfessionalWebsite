@@ -327,12 +327,12 @@ ul li {
 
 .btn-outline {
     background-color: transparent;
-    border: 2px solid #0b6fb8;
-    color: #0b6fb8;
+    border: 2px solid #083d66;
+    color: #083d66;
 }
 
 .btn-outline:hover {
-    background-color: #0b6fb8;
+    background-color: #A51F13;
     color: #fff;
 }
 
@@ -637,6 +637,7 @@ ul li {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
