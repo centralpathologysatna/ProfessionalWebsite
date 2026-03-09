@@ -150,6 +150,15 @@ flex-direction:column;
 gap:6px;
 }
 
+
+/* PACKAGES */
+.package{
+background:white;
+padding:20px;
+margin:20px 0;
+border-left:5px solid #1abc9c;
+}
+
 /* CONTENT */
 .container {
     padding: 50px 40px;
@@ -691,6 +700,7 @@ ul li {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
